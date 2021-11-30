@@ -12,7 +12,8 @@ class AnimalObject {
     }
 
     fun printAnimalObject(i: Int) {
-        println(" Type of animal " + nameAnimal + " " + "your food is " + foodAnimal + " " + specieAnimal)
+        println(" Type of animal " + nameAnimal + " " + "your food is "
+                + foodAnimal + " " + specieAnimal)
     }
 
     fun isCarnivore(): Boolean {
