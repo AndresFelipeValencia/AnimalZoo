@@ -17,7 +17,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.saveButtonDate.setOnClickListener { saveAnimalData() }
-        binding.consultButton.setOnClickListener { consultAnimal() }
+        binding.allHerbivores.setOnClickListener { buttonConsultHerbivores() }
+        binding.allCarnivores.setOnClickListener { buttonConsultCarnivores() }
+        binding.allAnimals.setOnClickListener { buttonConsultAllAnimals() }
     }
 
     fun saveAnimalData() {
@@ -27,34 +29,31 @@ class MainActivity : AppCompatActivity() {
 
         val animalObject = AnimalObject(name, specie, food)
         instanceOfZoologico.listAnimalsZoo.add(animalObject)
-
     }
 
-    fun consultAnimal() {
-        val allAnimal = binding.optionsConsult.checkedRadioButtonId
-        val consult = when (allAnimal) {
-            R.id.all_herbivores -> ""
-            R.id.all_carnivores -> ""
-            else -> ""
+    fun buttonConsultHerbivores() {
+        val animals = instanceOfZoologico.listAnimalsZoo
+        for (i in animals.indices) {
+            if (animals[i].isHerbivore()) {
+                animals[i].printAnimalObject(i)
+            }
         }
-
-        binding.printResult.text = consult
     }
 
+    fun buttonConsultCarnivores() {
+        val animals = instanceOfZoologico.listAnimalsZoo
+        for (i in animals.indices) {
+            if (animals[i].isCarnivore()) {
+                animals[i].printAnimalObject(i)
+            }
+        }
+    }
 
-
-
-
-
-
+    fun buttonConsultAllAnimals() {
+        val allAnimals = instanceOfZoologico.listAnimalsZoo
+        for (i in allAnimals.indices) {
+            allAnimals[i].printAnimalObject(i)
+        }
+    }
 
 }
-
-
-// instanceOfZoologico.getCarnivoresAnimals()
-//
-//
-//
-//       instanceOfZoologico.getHerbivoresAnimals()
-//       instanceOfZoologico.getCarnivoresAnimals()
-//       instanceOfZoologico.getAllAnimals()

@@ -10,7 +10,7 @@
     android:orientation="vertical"
     tools:context=".MainActivity"
     tools:ignore="RtlSymmetry">
-    
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -21,7 +21,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:importantForAccessibility="no"
-            app:srcCompat="@drawable/ic_register_animal"/>
+            app:srcCompat="@drawable/ic_register_animal" />
 
         <EditText
             android:id="@+id/enter_name_animal"
@@ -42,7 +42,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:importantForAccessibility="no"
-            app:srcCompat="@drawable/ic_specie_animal"/>
+            app:srcCompat="@drawable/ic_specie_animal" />
 
         <EditText
             android:id="@+id/enter_specie_animal"
@@ -50,20 +50,21 @@
             android:layout_height="wrap_content"
             android:hint="@string/specie_animal"
             android:importantForAutofill="no"
-            android:inputType="text" />
+            android:inputType="text"
+            tools:ignore="TouchTargetSizeCheck" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal" >
 
         <ImageView
             android:id="@+id/icon_type_food"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:importantForAccessibility="no"
-            app:srcCompat="@drawable/ic_type_food"/>
+            app:srcCompat="@drawable/ic_type_food" />
 
         <EditText
             android:id="@+id/enter_food_animal"
@@ -71,7 +72,8 @@
             android:layout_height="wrap_content"
             android:hint="@string/type_food"
             android:importantForAutofill="no"
-            android:inputType="text" />
+            android:inputType="text"
+            tools:ignore="TouchTargetSizeCheck" />
     </LinearLayout>
 
     <Button
@@ -79,7 +81,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="@string/save_button"/>
+        android:text="@string/save_button" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -92,7 +94,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:importantForAccessibility="no"
-            app:srcCompat="@drawable/ic_question_zoo"/>
+            app:srcCompat="@drawable/ic_question_zoo" />
 
         <TextView
             android:id="@+id/question"
@@ -102,43 +104,43 @@
             android:text="@string/animal_question" />
     </LinearLayout>
 
-    <RadioGroup
-        android:id="@+id/options_consult"
+    <Button
+        android:id="@+id/all_herbivores"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:checkedButton="@id/question"
-        android:orientation="vertical" >
-
-        <RadioButton
-            android:id="@+id/all_herbivores"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/option_all_herbivores" />
-
-        <RadioButton
-            android:id="@+id/all_carnivores"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/option_all_carnivores" />
-
-        <RadioButton
-            android:id="@+id/all_animals"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/option_all_animals" />
-    </RadioGroup>
+        android:text="@string/option_all_herbivores" />
 
     <Button
-        android:id="@+id/consult_button"
+        android:id="@+id/all_carnivores"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="@string/consult_button" />
+        android:text="@string/option_all_carnivores" />
 
-    <TextView
-        android:id="@+id/print_result"
-        style="@style/Widget.ZooAnimal.TextView"
+    <Button
+        android:id="@+id/all_animals"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/result"/>
+        android:text="@string/option_all_animals" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:id="@+id/icon_result_consult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            app:srcCompat="@drawable/ic_result_consult" />
+
+        <TextView
+            android:id="@+id/print_result"
+            style="@style/Widget.ZooAnimal.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/result" />
+    </LinearLayout>
+
 </LinearLayout>
