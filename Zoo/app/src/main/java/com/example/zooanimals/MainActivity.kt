@@ -29,6 +29,10 @@ class MainActivity : AppCompatActivity() {
 
         val animalObject = AnimalObject(name, specie, food)
         instanceOfZoologico.listAnimalsZoo.add(animalObject)
+
+        binding.enterNameAnimal.setText("")
+        binding.enterSpecieAnimal.setText("")
+        binding.enterFoodAnimal.setText("")
     }
 
     fun buttonConsultHerbivores() {
