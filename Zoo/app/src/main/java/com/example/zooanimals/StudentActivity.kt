@@ -56,10 +56,6 @@ class StudentActivity : AppCompatActivity() {
 
         binding.saveButtonData.setOnClickListener {
             saveStudentData()
-            binding.mathematicalSubject.isChecked = false
-            binding.scienceSubject.isChecked = false
-            binding.spanishSubject.isChecked = false
-
         }
 
         binding.consultMathematic.setOnClickListener {
@@ -89,20 +85,24 @@ class StudentActivity : AppCompatActivity() {
             Toast.makeText(this, "Please enter the name.", Toast.LENGTH_SHORT).show()
         } else if (grade.isEmpty()) {
             Toast.makeText(this, "Please enter the course.", Toast.LENGTH_SHORT).show()
-        }
-        if (listSubjectSelected.isEmpty()) {
+        } else if (listSubjectSelected.isEmpty()) {
             Toast.makeText(this, "Please select subject.", Toast.LENGTH_SHORT).show()
+        } else {
+            val studentObject = StudentObject(name, grade, listSubjectSelected.toMutableList())
+            instanceOfStudent.listStudents.add(studentObject)
+
+            binding.enterNameStudent.setText("")
+            binding.enterGradeStudent.setText("")
+            binding.mathematicalSubject.text = "Mathematics"
+            binding.scienceSubject.text = "Sciences"
+            binding.spanishSubject.text = "Spanish"
+            listSubjectSelected.clear()
+
+            binding.mathematicalSubject.isChecked = false
+            binding.scienceSubject.isChecked = false
+            binding.spanishSubject.isChecked = false
         }
 
-        val studentObject = StudentObject(name, grade, listSubjectSelected.toMutableList())
-        instanceOfStudent.listStudents.add(studentObject)
-
-        binding.enterNameStudent.setText("")
-        binding.enterGradeStudent.setText("")
-        binding.mathematicalSubject.text = "Mathematics"
-        binding.scienceSubject.text = "Sciences"
-        binding.spanishSubject.text = "Spanish"
-        listSubjectSelected.clear()
     }
 
     fun buttonConsultMathematic() {

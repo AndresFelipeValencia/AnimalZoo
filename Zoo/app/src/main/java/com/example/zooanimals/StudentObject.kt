@@ -4,7 +4,8 @@ import android.util.Log
 
 class StudentObject(
     val nameStudent: String, val gradeStudent: String, val listSubjects:
-    MutableList<EnumSubject> = mutableListOf()) {
+    MutableList<EnumSubject> = mutableListOf()
+) {
 
 
     fun isMathematic(): Boolean {
@@ -28,7 +29,7 @@ class StudentObject(
     fun printStudent(i: Int) {
         Log.d(
             "StudentObject", "Student's name: " + nameStudent + " " + "Its grade is: "
-                + gradeStudent
+                    + gradeStudent
         )
         for (subject in listSubjects) {
             Log.d("StudentObject", "Your registered subjects are: $listSubjects")
