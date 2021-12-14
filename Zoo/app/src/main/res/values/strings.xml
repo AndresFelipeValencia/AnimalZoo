@@ -1,23 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
 <resources>
-    <string name="app_name">Zoo animal registration</string>
+    <string name="app_name_student">student registration</string>
 
-    <string name="name_animal">Name Animal</string>
+    <string name="name_student">Name Student</string>
 
-    <string name="specie_animal">Animal Species</string>
+    <string name="enter_grade">Grades, six through eleven.</string>
 
-    <string name="type_food">Type of Food</string>
+    <string name="grade_student">Enter Grade</string>
+
+    <string name="subjects_available">Subjects, minimum 1 maximum 3, select: </string>
+
+    <string name="mathematics">Mathematics</string>
+
+    <string name="spanish">Spanish</string>
+
+    <string name="science">Sciences</string>
 
     <string name="save_button">Save Record</string>
 
-    <string name="animal_question">What do you want to consult?</string>
+    <string name="student_consult">What do you want to consult ?</string>
 
-    <string name="option_all_herbivores">Animals Herbivores</string>
+    <string name="all_math_students">Math students</string>
 
-    <string name="option_all_carnivores">Animals Carnivores</string>
+    <string name="all_science_students">Science students</string>
 
-    <string name="option_all_animals">All Animals</string>
+    <string name="all_spanish_students">Spanish students</string>
 
-    <string name="consult_button">Consult</string>
+    <string name="all_the_students">All students</string>
 
-    <string name="result">Result: </string>
+    <string name="result_student">The students are: </string>
+
+    <string name="app_name">Zoologico registration</string>
+
+    <string name="name_animal">Name Animal</string>
+
+    <string name="specie_animal">Specie Animal</string>
+
+    <string name="type_food">Type Food</string>
+
+    <string name="animal_question">What do you want to consult ?</string>
+
+    <string name="option_all_herbivores">All herbivores</string>
+
+    <string name="option_all_carnivores">All carnivores</string>
+
+    <string name="option_all_animals">All animals</string>
+
+    <string name="result">The result is: </string>
+
 </resources>
