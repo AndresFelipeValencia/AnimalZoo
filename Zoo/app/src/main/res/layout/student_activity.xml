@@ -1,53 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:paddingStart="16dp"
-    tools:context=".MainActivity"
+    tools:context="StudentActivity"
     tools:ignore="RtlSymmetry">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <ImageView
-            android:id="@+id/icon_name_animal"
+            android:id="@+id/icon_name_student"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:importantForAccessibility="no"
-            app:srcCompat="@drawable/ic_register_animal" />
+            app:srcCompat="@drawable/ic_name_student" />
 
         <EditText
-            android:id="@+id/enter_name_animal"
+            android:id="@+id/enter_name_student"
             android:layout_width="160dp"
             android:layout_height="wrap_content"
-             android:hint="@string/name_animal"
+            android:hint="@string/name_student"
             android:importantForAutofill="no"
             android:inputType="text" />
+
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        tools:ignore="UseCompoundDrawables">
+
+        <TextView
+            android:id="@+id/information"
+            style="@style/Widget.ZooAnimal.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/enter_grade" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
 
         <ImageView
-            android:id="@+id/icon_specie_animal"
+            android:id="@+id/icon_grade_student"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:importantForAccessibility="no"
-            app:srcCompat="@drawable/ic_specie_animal" />
+            app:srcCompat="@drawable/ic_grade_student" />
 
         <EditText
-            android:id="@+id/enter_specie_animal"
+            android:id="@+id/enter_grade_student"
             android:layout_width="160dp"
             android:layout_height="wrap_content"
-            android:hint="@string/specie_animal"
+            android:hint="@string/grade_student"
             android:importantForAutofill="no"
             android:inputType="text"
             tools:ignore="TouchTargetSizeCheck" />
@@ -56,27 +75,37 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        tools:ignore="UseCompoundDrawables">
 
-        <ImageView
-            android:id="@+id/icon_type_food"
+        <TextView
+            android:id="@+id/information_subject"
+            style="@style/Widget.ZooAnimal.TextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:importantForAccessibility="no"
-            app:srcCompat="@drawable/ic_type_food" />
-
-        <EditText
-            android:id="@+id/enter_food_animal"
-            android:layout_width="160dp"
-            android:layout_height="wrap_content"
-            android:hint="@string/type_food"
-            android:importantForAutofill="no"
-            android:inputType="text"
-            tools:ignore="TouchTargetSizeCheck" />
+            android:text="@string/subjects_available" />
     </LinearLayout>
+
+    <RadioButton
+        android:id="@+id/mathematical_subject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mathematics" />
+
+    <RadioButton
+        android:id="@+id/science_subject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/science" />
+
+    <RadioButton
+        android:id="@+id/spanish_subject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/spanish" />
 
     <Button
-        android:id="@+id/save_button_date"
+        android:id="@+id/save_button_data"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -96,32 +125,36 @@
             app:srcCompat="@drawable/ic_question_zoo" />
 
         <TextView
-            android:id="@+id/question"
+            android:id="@+id/consultation_question"
             style="@style/Widget.ZooAnimal.TextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/animal_question" />
+            android:text="@string/student_consult" />
     </LinearLayout>
 
     <Button
-        android:id="@+id/all_herbivores"
+        android:id="@+id/consult_mathematic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/option_all_herbivores" />
+        android:text="@string/all_math_students" />
 
     <Button
-        android:id="@+id/all_carnivores"
+        android:id="@+id/consult_science"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/option_all_carnivores" />
+        android:text="@string/all_science_students" />
 
     <Button
-        android:id="@+id/all_animals"
+        android:id="@+id/consult_spanish"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/option_all_animals" />
+        android:text="@string/all_spanish_students" />
 
-
+    <Button
+        android:id="@+id/consult_students"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/all_the_students" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -137,11 +170,14 @@
             app:srcCompat="@drawable/ic_result_consult" />
 
         <TextView
-            android:id="@+id/print_result"
+            android:id="@+id/print_result_student"
             style="@style/Widget.ZooAnimal.TextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/result" />
+            android:text="@string/result_student" />
     </LinearLayout>
 
-</LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
+
