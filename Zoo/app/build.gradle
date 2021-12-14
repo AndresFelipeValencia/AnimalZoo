@@ -6,6 +6,13 @@ plugins {
 android {
     compileSdk 31
 
+    android {
+
+        viewBinding {
+            enabled = true
+        }
+    }
+
     defaultConfig {
         applicationId "com.example.zooanimals"
         minSdk 28
